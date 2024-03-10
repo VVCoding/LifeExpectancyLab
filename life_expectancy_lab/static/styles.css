@@ -1,0 +1,41 @@
+body{
+  background-color:white;
+  font-family: "Noto Sans";
+}
+
+.label {
+  cursor: default;
+  text-anchor: middle;
+  font-size: 14px;
+  fill: #444444;
+}
+
+.mdtlne{
+  opacity: 1.0;
+}
+
+.udtlne{
+  opacity: 1.0;
+}
+
+g:hover{
+  opacity:0.5;
+}
+
+.adtlne{
+  opacity: 1.0;
+}
+
+.adtlne:hover{
+  opacity:0.5;
+  stroke:grey;
+}
+
+text{
+  font-family: "Noto Sans";
+  fill: black;
+}
+
+.summary{
+  font-size: 17px;
+}

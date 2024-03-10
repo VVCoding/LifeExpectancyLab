@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 500 500" width="500" height="500">
+
+     <text x ="240" y= "50" text-anchor = "middle">Graph of Life Expectancy per country versus time</text>
+     <text x="60" y="490" text-anchor="middle">1960</text>
+     <text x="120" y="490" text-anchor="middle">1970</text>
+     <text x="180" y="490" text-anchor="middle">1980</text>
+     <text x="240" y="490" text-anchor="middle">1990</text>
+     <text x="300" y="490" text-anchor="middle">2000</text>
+     <text x="360" y="490" text-anchor="middle">2010</text>
+     <text x="426.79245283018867" y="490" text-anchor="middle">2020</text>
+     <text alignment-baseline="middle" text-anchor = "middle" transform = "translate(-20,250) rotate(270)">Life Expectancy (Years)</text>
+     <line x1="25" y1="460" x2="25" y2="10" style="stroke:black"/>
+     <line x1="25" y1="460" x2="460" y2="460" style="stroke:black"/>
+     <rect x="165" y = "250" width="50" height = "50" style = "fill:red"></rect>
+     <rect x="215" y = "250" width="50" height = "50" style = "fill:blue"></rect>
+     <rect x="265" y = "250" width="50" height = "50" style = "fill:black"></rect>
+     <rect x="315" y = "250" width="50" height = "50" style = "fill:green"></rect>
+     <text x="171" y= "280" style = "stroke: white; font-size:10px">Canada</text>
+     <text x="228" y= "280" style = "stroke: white; font-size:10px">USA</text>
+     <text x="271" y= "280" style = "stroke: white; font-size:10px">Average</text>
+     <text x="324" y= "280" style = "stroke: white; font-size:10px">Mexico</text>
+     <line x1="20" x2 = "30" y1 = "56" y2="56" style = "stroke:black"/>
+     <text x = "0" y = "61">90</text>
+     <line x1="20" x2 = "30" y1 = "102" y2="102" style = "stroke:black"/>
+     <text x = "0" y = "107">80</text>
+     <line x1="20" x2 = "30" y1 = "148" y2="148" style = "stroke:black"/>
+     <text x = "0" y = "153">70</text>
+     <line x1="20" x2 = "30" y1 = "194" y2="194" style = "stroke:black"/>
+     <text x = "0" y = "199">60</text>
+     <line x1="20" x2 = "30" y1 = "240" y2="240" style = "stroke:black"/>
+     <text x = "0" y = "245">50</text>
+     <line x1="20" x2 = "30" y1 = "286" y2="286" style = "stroke:black"/>
+     <text x = "0" y = "291">40</text>
+     <line x1="20" x2 = "30" y1 = "332" y2="332" style = "stroke:black"/>
+     <text x = "0" y = "337">30</text>
+     <line x1="20" x2 = "30" y1 = "378" y2="378" style = "stroke:black"/>
+     <text x = "0" y = "383">20</text>
+     <line x1="20" x2 = "30" y1 = "424" y2="424" style = "stroke:black"/>
+     <text x = "0" y = "429">10</text>
+     <line x1="20" x2 = "30" y1 = "10" y2="10" style = "stroke:black"/>
+     <text x = "-9" y = "15">100</text>
+
+     <g class="cdtlne" style= "stroke: red; stroke-width: 4; stroke-linecap: round;">
+     {% for point in cendpoints %}
+     <line  x1="{{60+((loop.index0*90)/5300)*(360)}}" y1="{{472-(point[0]/140)*(650)}}" x2="{{60+(((loop.index0+1)*90)/5300)*(360)}}" y2="{{472-(point[1]/140)*(650)}}"/>
+     {% endfor %}
+     </g>
+
+     <g class="mdtlne" style= "stroke: green; stroke-width: 4; stroke-linecap: round;">
+     {% for point in mendpoints %}
+     <line class="mdtlne" x1="{{60+((loop.index0*90)/5300)*(360)}}" y1="{{472-(point[0]/140)*(650)}}" x2="{{60+(((loop.index0+1)*90)/5300)*(360)}}" y2="{{472-(point[1]/140)*(650)}}" style= "stroke: green; stroke-width: 4; stroke-linecap: round"/>
+     {% endfor %}
+     </g>
+
+     <g class="udtlne" style= "stroke: blue; stroke-width: 4; stroke-linecap: round;">
+     {% for point in uendpoints %}
+     <line class="udtlne" x1="{{60+((loop.index0*90)/5300)*(360)}}" y1="{{472-(point[0]/140)*(650)}}" x2="{{60+(((loop.index0+1)*90)/5300)*(360)}}" y2="{{472-(point[1]/140)*(650)}}" style= "stroke: blue; stroke-width: 4; stroke-linecap: round"/>
+     {% endfor %}
+     </g>     
+
+     <line class="adtlne" x1="60" y1="{{382-(avgval/140)*(470)}}" x2="426.79245283018867" y2="{{382-(avgval/140)*(470)}}" style= "stroke: black; stroke-width: 4; stroke-linecap: round"/>
+
+
+     
+</svg>
+
+

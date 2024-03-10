@@ -1,0 +1,36 @@
+
+<html>
+<head>
+  <title>Life Expectancy Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Recursive&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Life Expectancy Lab - Vedant Vohra</h1>
+
+  <div>
+    {% include 'line_graph.svg' %}
+  </div>
+
+        <form action="/year" method="GET">
+          <label for="year">Choose a year:</label><br>
+          <select name="year" id="year_select"> 
+            {% for y in all_years %}
+                {% if y == year %}
+                  <option value="{{y}}" selected>{{y}}</option>
+                {% else %}
+                  <option value="{{y}}">{{y}}</option>
+                {% endif %}
+            {% endfor %}
+          </select>
+          <input type="submit" value="Submit">
+        <form>
+        
+  <footer>
+    All data from <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MX-US-CA"> The World Bank</a>.
+  </footer>
+</body>
+</html>
