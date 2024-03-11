@@ -76,14 +76,14 @@ def year():
     
     #represent all variables needed in render template
     # round values of life expectancy
-    roundedu = round(requested_data["UnitedStates"])
-    roundedc = round(requested_data["Canada"])  
-    roundedm = round(requested_data["Mexico"]) 
+    roundedu = round(requested_data["UnitedStates"],2)
+    roundedc = round(requested_data["Canada"],2)  
+    roundedm = round(requested_data["Mexico"],2) 
     
     # rounded values of percent of North American Average
-    avgMex = round((roundedm)/((roundedc+roundedm+roundedu)/3)*100)
-    avgUSA = round((roundedu)/((roundedc+roundedm+roundedu)/3)*100) 
-    avgCanada = round((roundedc)/((roundedc+roundedm+roundedu)/3)*100)  
+    avgMex = round(((roundedm)/((roundedc+roundedm+roundedu)/3)*100),2)
+    avgUSA = round(((roundedu)/((roundedc+roundedm+roundedu)/3)*100),2) 
+    avgCanada = round(((roundedc)/((roundedc+roundedm+roundedu)/3)*100),2)  
     
     return render_template('year.html', requested_year= requested_year, data = requested_data, countries = countries, roundedu = roundedu, roundedm = roundedm, roundedc = roundedc, avgMex = avgMex, avgUSA = avgUSA, avgCanada = avgCanada)
 

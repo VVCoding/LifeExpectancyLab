@@ -351,8 +351,8 @@
   <rect x="250" y = "430" width="50" height = "50" style = "fill:#641220"></rect>
   <text x = "242" y = "500">81</text> 
 
-  <text class = "summary" x="-310" y = "800"> Mexico has a Life Expectancy of {{roundedm}} years in {{requested_year}} and this is {{avgMex}} percent of the North American average</text> 
-  <text class = "summary" x="-310" y = "820"> Canada has a Life Expectancy of {{roundedc}} years in {{requested_year}} and this is {{avgCanada}} percent of the North American average</text> 
-  <text class = "summary" x="-310" y = "840"> The USA has a Life Expectancy of {{roundedu}} years in {{requested_year}} and this is {{avgUSA}} percent of the North American average</text> 
+  <text class = "summary" x="-310" y = "800"> Mexico has the lowest Life Expectancy of {{roundedm}} years in {{requested_year}} and this is {{avgMex}} percent of the North American average</text> 
+  <text class = "summary" x="-310" y = "820"> Canada has the highest Life Expectancy of {{roundedc}} years in {{requested_year}} and this is {{avgCanada}} percent of the North American average</text> 
+  <text class = "summary" x="-310" y = "840"> The USA lags behind Canada with a Life Expectancy of {{roundedu}} years in {{requested_year}} and this is {{avgUSA}} percent of the North American average</text> 
 
 </svg>
