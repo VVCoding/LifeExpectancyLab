@@ -58,7 +58,7 @@
      {% endfor %}
      </g>     
 
-     <line class="adtlne" x1="60" y1="{{382-(avgval/140)*(470)}}" x2="426.79245283018867" y2="{{382-(avgval/140)*(470)}}" style= "stroke: black; stroke-width: 4; stroke-linecap: round"/>
+     <line class="adtlne" x1="60" y1="{{382-(avgval/140)*(470)}}" x2="426.79245283018867" y2="{{382-(avgval/140)*(470)}}" stroke-dasharray = "8" style= "stroke: black; stroke-width: 4; stroke-linecap: round"/>
 
 
      
